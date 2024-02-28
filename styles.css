@@ -2,6 +2,7 @@
 *{
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 font-family: "Poppins", sans-serif;
 }
 
@@ -113,11 +114,101 @@ font-family: "Poppins", sans-serif;
     font-style: italic;
   }
 
-  ul {
-    list-style-type: none
+  header{
+    height: 75px;
+    background-color: rgba(199, 125, 255, 0.68);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
   }
 
-  a {
-    text-decoration: none;
+  .logo{
+    font-size: 37px;
+    font-weight: 600;
   }
-  
+
+  .logo a{
+    text-decoration: none;
+    color: white;
+  }
+
+  ul{
+    display: flex;
+    list-style-type: none;
+  }
+
+  ul li a{
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  ul li a::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: #FFEB99;
+    transition:all .5s;
+  }
+
+  ul li a:hover::after{
+    width: 100%;
+  }
+
+  body{
+    background: rgb(16,0,43);
+    background: -moz-linear-gradient(200deg, rgba(16,0,43,1) 0%, rgba(60,9,108,1) 28%, rgba(199,125,255,1) 88%, rgba(224,170,255,0.72) 100%);
+    background: -webkit-linear-gradient(200deg, rgba(16,0,43,1) 0%, rgba(60,9,108,1) 28%, rgba(199,125,255,1) 88%, rgba(224,170,255,0.72) 100%);
+    background: linear-gradient(200deg, rgba(16,0,43,1) 0%, rgba(60,9,108,1) 28%, rgba(199,125,255,1) 88%, rgba(224,170,255,0.72) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
+    background-attachment: fixed;
+  }
+
+  main{
+    display: flex;
+    height: calc(100vh - 75px);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-card{
+    
+  }
+
+  .hero-img{
+    max-width: 730px;
+    height: auto;
+  }
+
+  .content-right{
+    width: 43%;
+    margin-right: 60px;
+  }
+
+  main h1{
+    font-size: 75px;
+    font-weight: 700;
+    color: white;
+  }
+
+  main h2{
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    margin-left: 260px;
+  }
+
+  main p{
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+  }
+
+  main span{
+    color: #FFCC00;
+  }
