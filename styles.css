@@ -209,25 +209,25 @@ html{
     margin-right: 5%;
   }
 
-  main h1{
+  .landing-page h1{
     font-size: 4rem;
     font-weight: 700;
     color: whitesmoke;
   }
 
-  main h2{
+  .landing-page h2{
     font-size: 3.6rem;
     font-weight: 700;
     color: whitesmoke;
     margin-left: 260px;
   }
 
-  main p{
+  .landing-page p{
     font-size: 1rem;
     font-weight: 300;
     color: whitesmoke;
   }
 
-  main span{
+  .landing-page span{
     color: var(--color--yellow-dark);
   }
