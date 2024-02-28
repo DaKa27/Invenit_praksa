@@ -6,6 +6,17 @@ box-sizing: border-box;
 font-family: "Poppins", sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+:root{
+  --color--purple-light: #A486D5;
+  --color--purple-dark: #54318C;
+  --color--yellow-light: #FFEB99;
+  --color--yellow-dark: #FFCC00;
+}
+
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
@@ -115,7 +126,15 @@ font-family: "Poppins", sans-serif;
   }
 
   header{
-    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+  }
+
+  nav{
+    height: 70px;
     background-color: rgba(199, 125, 255, 0.68);
     display: flex;
     justify-content: space-around;
@@ -123,92 +142,92 @@ font-family: "Poppins", sans-serif;
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
   }
 
-  .logo{
-    font-size: 37px;
-    font-weight: 600;
+  .logo img{
+    max-height: 60px;
+    width: auto;
   }
 
   .logo a{
     text-decoration: none;
-    color: white;
   }
 
-  ul{
+  nav ul{
     display: flex;
     list-style-type: none;
   }
 
-  ul li a{
+  nav ul li a{
     padding: 0 20px;
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
     display: inline-block;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
   }
 
-  ul li a::after{
+  nav ul li a::after{
     content: '';
     display: block;
     height: 4px;
     width: 0;
-    background: #FFEB99;
+    background: var(--color--yellow-dark);
     transition:all .5s;
   }
 
-  ul li a:hover::after{
+  nav ul li a:hover::after{
     width: 100%;
   }
 
-  body{
+  .landing-page{
+    height: 100vh;
+    width: 100vw;
     background: rgb(16,0,43);
-    background: -moz-linear-gradient(200deg, rgba(16,0,43,1) 0%, rgba(60,9,108,1) 28%, rgba(199,125,255,1) 88%, rgba(224,170,255,0.72) 100%);
-    background: -webkit-linear-gradient(200deg, rgba(16,0,43,1) 0%, rgba(60,9,108,1) 28%, rgba(199,125,255,1) 88%, rgba(224,170,255,0.72) 100%);
-    background: linear-gradient(200deg, rgba(16,0,43,1) 0%, rgba(60,9,108,1) 28%, rgba(199,125,255,1) 88%, rgba(224,170,255,0.72) 100%);
+    background: -moz-linear-gradient(200deg, rgba(16,0,43,1) 0%, rgba(60,9,108,1) 52%, rgba(199,125,255,1) 87%, rgba(224,170,255,0.7) 100%);
+    background: -webkit-linear-gradient(200deg, rgba(16,0,43,1) 0%, rgba(60,9,108,1) 52%, rgba(199,125,255,1) 87%, rgba(224,170,255,0.7) 100%);
+    background: linear-gradient(200deg, rgba(16,0,43,1) 0%, rgba(60,9,108,1) 52%, rgba(199,125,255,1) 87%, rgba(224,170,255,0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
     background-attachment: fixed;
   }
 
-  main{
+  .hero-card {
     display: flex;
-    height: calc(100vh - 75px);
     align-items: center;
     justify-content: center;
   }
-
-  .hero-card{
-    
+  .hero-img {
+    max-width: 260px;
+    height: auto;
+    padding-top: 30%;
   }
 
-  .hero-img{
-    max-width: 730px;
-    height: auto;
+  .content-left{
+    padding-right: 5%;
   }
 
   .content-right{
-    width: 43%;
-    margin-right: 60px;
+    width: 46%;
+    margin-right: 5%;
   }
 
   main h1{
-    font-size: 75px;
+    font-size: 4rem;
     font-weight: 700;
-    color: white;
+    color: whitesmoke;
   }
 
   main h2{
-    font-size: 70px;
+    font-size: 3.6rem;
     font-weight: 700;
-    color: white;
+    color: whitesmoke;
     margin-left: 260px;
   }
 
   main p{
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 300;
-    color: white;
+    color: whitesmoke;
   }
 
   main span{
-    color: #FFCC00;
+    color: var(--color--yellow-dark);
   }
