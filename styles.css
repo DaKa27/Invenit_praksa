@@ -391,6 +391,7 @@ html{
  margin: 40px;
  overflow: hidden;
  overflow-y: scroll;
+ scroll-behavior: smooth;
  direction: rtl;
  border-radius: 10px;
 }
