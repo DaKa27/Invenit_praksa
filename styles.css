@@ -36,16 +36,6 @@ html{
   background-color: #a8bbbf;
 }
 
-.landing-page {
-  scroll-snap-align: start;
-}
-
-.reasons{
-  scroll-snap-type: mandatory;
-  scroll-snap-align: start;
-}
-
-
 :root{
   --color--purple-light: #A486D5;
   --color--purple-dark: #54318C;
@@ -215,6 +205,7 @@ html{
   }
 
   .landing-page{
+    display: flex;
     height: 100vh;
     width: 100vw;
     background: -moz-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
@@ -222,6 +213,7 @@ html{
     background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
     background-attachment: fixed;
+
   }
 
   .hero-card {
@@ -362,7 +354,11 @@ html{
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: aqua;
+  background: -moz-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    background: -webkit-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
+    background-attachment: fixed;
  }
 
  .window{
@@ -502,7 +498,7 @@ html{
   display: flex;
   width: 55%;
  height: 44%;
- background-color:antiquewhite;
+ background-color:#d6dee1;
  margin: 40px;
  margin-top: 55px;
  border-radius: 5px;
@@ -528,7 +524,7 @@ html{
   justify-content: flex-end;
   height: 50px;
   width: 85%;
-  background-color: #d9d9d9;
+  background-color: #d6dee1;
   border-radius: 5px;
   padding-left: 20px;
 }
@@ -538,6 +534,86 @@ html{
 }
 .content-card a:active{
   color: var(--color--purple-light);
+}
+
+.impressions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: -moz-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    background: -webkit-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
+    background-attachment: fixed;
+}
+
+.swiper {
+  width: 90%;
+  height: 70%;
+  
+}
+
+.swiper .swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #c77dff !important;
+}
+.swiper-button-next{
+  color: #c77dff !important;
+}
+
+.swiper-button-prev{
+  color: #c77dff !important;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #05FF00;
+  margin: 25px;
+  border-radius: 10px;
+  height: 80%;
+  width: 25%;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 70%;
+  height: 40%;
+  width: 100%;
+  background: rgba(242,228,246,0.45);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(242,228,246,0.225);
+  border-radius: 25px 25px 10px 10px;
+}
+
+.description p{
+  font-size: 0.8rem;
+  padding: 15px;
+}
+
+.details .name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.details .name h3 {
+  margin-right: 5px;
 }
 
   @media only screen and (min-width: 768px) and (max-width: 959px){

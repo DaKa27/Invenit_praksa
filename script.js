@@ -12,3 +12,21 @@ function showDiv(event, divNumber) {
       selectedDiv.style.display = 'flex';
     }
   }
+
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    //mousewheel: true,
+    spaceBetween: 0,
+    effect: 'fade',
+    speed: 1000,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+  });
