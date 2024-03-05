@@ -480,11 +480,11 @@ html{
 .content-and-see-content {
   display: flex;
   width: 100%;
+  height: 90%;
 }
 
 .content{
  width: 35%;
- height: 45%;
  background-color: #F0F0F0;
  margin: 40px;
  overflow: hidden;
@@ -496,8 +496,10 @@ html{
 
 .see-content{
   display: flex;
+  overflow: hidden;
+  overflow-y: scroll;
+ scroll-behavior: smooth;
   width: 55%;
- height: 44%;
  background-color:#d6dee1;
  margin: 40px;
  margin-top: 55px;
@@ -534,6 +536,26 @@ html{
 }
 .content-card a:active{
   color: var(--color--purple-light);
+}
+.link-content{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 40px;
+}
+.link-content h2{
+  padding-bottom: 20px;
+}
+.link-content .titles{
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.link-content .titles p{
+  font-weight: 300;
+}
+.link-content .titles .odg-list{
+  font-weight: 300;
+  margin-left: 20px;
+  padding-bottom: 10px;
 }
 
 .impressions{
