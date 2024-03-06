@@ -9,11 +9,18 @@ font-family: "Poppins", sans-serif;
 html{
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y:auto;
+  overflow-y: scroll;
 }
 
-.container {
+.main{
+  height: 100vh;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
+}
+
+.main > section{
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 ::-webkit-scrollbar {
@@ -153,6 +160,7 @@ html{
 
   header{
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -176,7 +184,12 @@ html{
   .logo a{
     text-decoration: none;
   }
-
+  .hamburger {
+    display: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+  }
   nav ul{
     display: flex;
     list-style-type: none;
@@ -206,6 +219,8 @@ html{
 
   .landing-page{
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     width: 100vw;
     background: -moz-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
@@ -218,19 +233,19 @@ html{
 
   .hero-card {
     display: flex;
+    flex-direction: row;
+    gap: 30px;
     align-items: center;
     justify-content: center;
-    position: relative;
     height: 70%;
-    width: 80%;
-    top: 20%;
-    left: 10%;
+    width: 90%;
     padding-bottom: 5%;
+    margin-top: 5%;
     background-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15px);
     border: solid 2px rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
+    border-radius: 20px;
   }
   .hero-img {
     max-width: 250px;
@@ -238,15 +253,7 @@ html{
     padding-top: 30%;
   }
 
-  .content-left{
-    padding-right: 7%;
-  }
-
-  .content-right{
-    width: 60%;
-    margin-right: 5%;
-    padding-left: 3%;
-  }
+  
 
   .landing-page h1{
     font-size: 4rem;
@@ -259,7 +266,7 @@ html{
     font-size: 3.6rem;
     font-weight: 700;
     color: whitesmoke;
-    padding-left: 260px;
+    margin-left: 260px;
     text-shadow: 2px;
   }
 
@@ -275,6 +282,11 @@ html{
   }
 
   .reasons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
     background: rgb(16,0,43);
@@ -283,21 +295,12 @@ html{
     background: linear-gradient(180deg, rgba(16,0,43,1) 0%, rgba(42,5,81,1) 0%, rgba(60,9,108,1) 31%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#3c096c",GradientType=1);
     background-position: fixed;
-    overflow: hidden;
-  }
-
-  .reasons span{
-    color: var(--color--yellow-dark);
   }
 
   .reasons h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 2rem;
     padding-top: 80px;
     color: #d6dee1;
-    
   }
 
  .cover-image img{ 
@@ -308,12 +311,12 @@ html{
 
  .cards-reasons{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 50px;
+  margin-top: 50px;
  }
 
  .cards {
@@ -322,7 +325,7 @@ html{
     justify-content: center;
     width: 380px;
     height: 170px;
-    border-radius: 25px;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15px);
@@ -342,9 +345,10 @@ html{
  }
 
  .text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-left: 20px;
   padding-right: 10px;
+  font-weight: 300;
   cursor:default;
  }
 
@@ -355,10 +359,10 @@ html{
   height: 100vh;
   width: 100vw;
   background: -moz-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
-    background: -webkit-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
-    background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
-    background-attachment: fixed;
+  background: -webkit-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+  background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
+  background-attachment: fixed;
  }
 
  .window{
@@ -367,7 +371,7 @@ html{
   background-color: #F0F0F0;
   overflow: hidden;
   margin-top: 5%;
-  height: 80%; /*450px*/
+  height: 80%;
   width: 90%;
   border-radius: 10px;
  }
@@ -565,16 +569,15 @@ html{
   height: 100vh;
   width: 100vw;
   background: -moz-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
-    background: -webkit-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
-    background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
-    background-attachment: fixed;
+  background: -webkit-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+  background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
+  background-attachment: fixed;
 }
 
 .swiper {
   width: 90%;
-  height: 70%;
-  
+  height: 70%; 
 }
 
 .swiper .swiper-slide{
@@ -587,6 +590,7 @@ html{
 .swiper-pagination-bullet-active {
   background-color: #c77dff !important;
 }
+
 .swiper-button-next{
   color: #c77dff !important;
 }
@@ -601,17 +605,15 @@ html{
   justify-content: center;
   align-items: center;
   background: #05FF00;
-  margin: 25px;
   border-radius: 10px;
-  height: 80%;
-  width: 25%;
+  height: 85%;
+  width: 80%;
 }
 
 .details{
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin-top: 70%;
   height: 40%;
   width: 100%;
   background: rgba(242,228,246,0.45);
@@ -619,6 +621,10 @@ html{
   backdrop-filter: blur(10px);
   border: 1px solid rgba(242,228,246,0.225);
   border-radius: 25px 25px 10px 10px;
+}
+
+.pfp{
+  height: 60%;
 }
 
 .description p{
@@ -651,11 +657,11 @@ html{
 }
 .footer{
 	background-color: #24262b;
-    padding: 70px 0;
+  padding: 70px 0;
 }
 .footer-col{
-   width: 25%;
-   padding: 0 15px;
+  width: 25%;
+  padding: 0 15px;
 }
 
 .footer-col img{
@@ -664,6 +670,8 @@ html{
 }
 .footer-col p{
   color: #bbbbbb;
+  font-weight: 300;
+  font-size: 0.8rem;
 }
 .footer-col h4{
 	font-size: 18px;
@@ -719,19 +727,63 @@ html{
 
 /*responsive*/
 @media(max-width: 767px){
+  header{
+    width: 100%;
+  }
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .hamburger #closeHam {
+    display: none;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background-color: rgba(199, 125, 255, 0.95);
+    width: 100%;
+    height: 35vh;
+    padding-top: 60px;
+    gap: 5vh;
+  }
+  .landing-page{
+    display: flex;
+    flex-direction: row;
+  }
+  .hero-card{
+    background: none;
+    border: none;
+    box-shadow: none;
+    
+  }
+  .landing-page h1{
+    font-size: 1.3rem;
+  }
+  .landing-page h2{
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+  .landing-page p{
+    font-size: 0.8rem;
+  }
+
+  .landing-page img{
+    height: 300px;
+    width: auto;
+  }
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
-}
+  }
 }
 @media(max-width: 574px){
   .footer-col{
     width: 100%;
 }
 }
-
-  @media only screen and (min-width: 768px) and (max-width: 959px){
-    
-  }
 
   

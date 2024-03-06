@@ -12,11 +12,15 @@
     <header>  
         <nav>
             <div class="logo"><a href="#landing-page"><img src="./images/logo.png" alt="Image can't load"></a></div>
-            <ul class="navigation">
+            <ul class="navigation" id="navigation">
                 <li><a href="#reasons">Zašto IT</a></li>
                 <li><a href="#jobs">Zanimanja</a></li>
-                <li><a href="">Iskustva</a></li>
+                <li><a href="#impressions">Iskustva</a></li>
             </ul>
+            <div class="hamburger">
+                <span id="openHam">&#9776;</span>
+                <span id="closeHam">&#x2716;</span>
+            </div>
         </nav>
     </header>
     <main>
@@ -401,7 +405,7 @@
                     </div>
                 </div>
             </section>
-            <section class="impressions">
+            <section class="impressions" id="impressions">
                 <div class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
@@ -419,18 +423,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="pfp"></div>
-                            <div class="details">
-                                <div class="name">
-                                    <h3>John Doe</h3>
-                                    <p>| job</p>    
-                                </div>
-                                <div class="description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus magni illo perferendis sapiente odit dolorem soluta provident magnam cum modi.</p>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
+                      <div class="swiper-slide">
                         <div class="card">
                             <div class="pfp"></div>
                             <div class="details">
@@ -457,30 +451,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="pfp"></div>
-                            <div class="details">
-                                <div class="name">
-                                    <h3>John Doe</h3>
-                                    <p>| job</p>    
-                                </div>
-                                <div class="description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus magni illo perferendis sapiente odit dolorem soluta provident magnam cum modi.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="pfp"></div>
-                            <div class="details">
-                                <div class="name">
-                                    <h3>John Doe</h3>
-                                    <p>| job</p>    
-                                </div>
-                                <div class="description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus magni illo perferendis sapiente odit dolorem soluta provident magnam cum modi.</p>
-                                </div>
-                            </div>
-                        </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="card">
@@ -495,18 +465,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="pfp"></div>
-                            <div class="details">
-                                <div class="name">
-                                    <h3>John Doe</h3>
-                                    <p>| job</p>    
-                                </div>
-                                <div class="description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus magni illo perferendis sapiente odit dolorem soluta provident magnam cum modi.</p>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
+                      <div class="swiper-slide">
                         <div class="card">
                             <div class="pfp"></div>
                             <div class="details">
@@ -534,7 +494,9 @@
             <div class="row">
                 <div class="footer-col">
                     <img src="./images/logo2.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, hic unde accusamus assumenda suscipit placeat iure minima necessitatibus commodi ut quidem perferendis soluta ipsam eum ad deleniti sunt illum quasi?</p>
+                    <p>Bulevar vojvode Stepe Stepanovica 171a, lokal 2 <br>
+                        78 000 Banja Luka <br>
+                        Bosnia and Herzegovina</p>
                 </div>
                 <div class="footer-col">
                     <h4>company</h4>
