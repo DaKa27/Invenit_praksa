@@ -323,12 +323,11 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 380px;
+    width: 360px;
     height: 170px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(15px);
     border: solid 2px rgba(255, 255, 255, 0.1);
  }
 
@@ -345,7 +344,7 @@ html{
  }
 
  .text {
-  font-size: 1rem;
+  font-size: 0.75rem;
   padding-left: 20px;
   padding-right: 10px;
   font-weight: 300;
@@ -620,7 +619,7 @@ html{
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(242,228,246,0.225);
-  border-radius: 25px 25px 10px 10px;
+  border-radius: 15px 15px 10px 10px;
 }
 
 .pfp{
