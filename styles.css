@@ -289,12 +289,11 @@ html{
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-    background: rgb(16,0,43);
-    background: -moz-linear-gradient(180deg, rgba(16,0,43,1) 0%, rgba(42,5,81,1) 0%, rgba(60,9,108,1) 31%);
-    background: -webkit-linear-gradient(180deg, rgba(16,0,43,1) 0%, rgba(42,5,81,1) 0%, rgba(60,9,108,1) 31%);
-    background: linear-gradient(180deg, rgba(16,0,43,1) 0%, rgba(42,5,81,1) 0%, rgba(60,9,108,1) 31%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#3c096c",GradientType=1);
-    background-position: fixed;
+    background: -moz-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    background: -webkit-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
+    background-attachment: fixed;
   }
 
   .reasons h2{
@@ -358,10 +357,10 @@ html{
   height: 100vh;
   width: 100vw;
   background: -moz-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
-  background: -webkit-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
-  background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
-  background-attachment: fixed;
+    background: -webkit-linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    background: linear-gradient(228deg,#10002b 17.43%, #3c096c 58.38%, #c77dff 98.55%,rgba(224, 170, 255, 0.72) 121%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#10002b",endColorstr="#e0aaff",GradientType=1);
+    background-attachment: fixed;
  }
 
  .window{
@@ -603,7 +602,7 @@ html{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #05FF00;
+  background: var(--color--purple-light);
   border-radius: 10px;
   height: 85%;
   width: 80%;
@@ -623,7 +622,15 @@ html{
 }
 
 .pfp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 60%;
+
+}
+.pfp img{
+  height: 230px;
+  width: auto;
 }
 
 .description p{
